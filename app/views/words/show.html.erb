@@ -1,0 +1,15 @@
+<center>
+	<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @word.word %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @word.position %>
+</p>
+<br><br><br>
+<%= link_to("GENERATE NEW BAND NAME", welcome_index_path) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to("ADD NEW WORDS", words_new_path) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to("VIEW WORD LIST", words_path) %>
+</center>
