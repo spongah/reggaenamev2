@@ -1,12 +1,13 @@
 class WordsController < ApplicationController
   before_action :set_word, only: [:show, :edit, :update, :destroy]
 
+ 
   # GET /words
   # GET /words.json
   def index
     @words = Word.all.order(:position)
-
-  end
+    @header_adj = [:irie, :ital, :rasta, :rootical].sample.capitalize
+ end
 
   # GET /words/1
   # GET /words/1.json
@@ -16,16 +17,19 @@ class WordsController < ApplicationController
   # GET /words/new
   def new
     @word = Word.new
+    @header_adj = [:irie, :ital, :rasta, :rootical].sample.capitalize
   end
 
   # GET /words/1/edit
   def edit
+    @header_adj = [:irie, :ital, :rasta, :rootical].sample.capitalize
   end
 
   # POST /words
   # POST /words.json
   def create
     @word = Word.new(word_params)
+    @header_adj = [:irie, :ital, :rasta, :rootical].sample.capitalize
 
     respond_to do |format|
       if @word.save

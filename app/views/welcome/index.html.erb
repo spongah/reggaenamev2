@@ -1,16 +1,6 @@
-<center>
-<h1><%= @header_adj %> reggae band name generator</h1> v2.0
-<% @punctuation=['.', '!', '!!', '!!!', ', mon.', ', mon!', ', JAH!!'].sample %>
-<br><br><br><br><br>
-<p>
-	<font size=+1 color=green><%= @commandment %> <b><%= @bandname.upcase %></b><%= @punctuation %>
-	</font>
-	<br><br>
-<!--	<%= link_to("I like this band name", ) %>&nbsp;&nbsp;<%= link_to("This band name sucks", ) %> -->
-	<br><br><br>
-	<%= button_to("Generate New Band Name", welcome_index_path, :method => :get) %>
-</p>
-<br><br>
-<%= link_to("ADD NEW WORDS", words_new_path) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to("VIEW WORD LIST", words_path) %>
-<br><br>
-</center>
+ <div class="reggae-body">
+ <!--		<% @punctuation=['.', '!', '!!', '!!!', ', mon.', ', mon!', ', JAH!!'].sample %>  -->
+	<h4>
+		<%= @commandment %> <h2><strong><%= @bandname.upcase %></strong></h>
+	</h>
+</div>
